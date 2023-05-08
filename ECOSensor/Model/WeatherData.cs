@@ -2,18 +2,28 @@
 {
     public class WeatherData
     {
-       public float Temperature { get; }
+       public float? Temperature { get; }
        public int Humidity { get; }
 
-       public float Speed { get; }
+       public float WindSpeed { get; }
 
-        public WeatherData(float temperature, int humidity, float speed)
+        public WeatherData(float temperature, int humidity, float windSpeed)
         {
             Temperature = temperature;
             Humidity = humidity;
-            Speed = speed;
+            WindSpeed = windSpeed;
         }
 
+        public void WeatherValidate()
+        {
+            if (Temperature == null)
+            {
+                throw new ArgumentOutOfRangeException("");
+            }
+
+
+            
+        }
 
 
 
