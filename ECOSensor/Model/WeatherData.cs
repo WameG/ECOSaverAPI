@@ -1,4 +1,6 @@
-﻿namespace ECOSensor.Model
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace ECOSensor.Model
 {
     public class WeatherData
     {
@@ -18,11 +20,18 @@
         {
             if (Temperature == null)
             {
-                throw new ArgumentOutOfRangeException("");
+                throw new ArgumentNullException();
             }
 
+            if (Humidity == null)
+            {
+                throw new ArgumentNullException():
+            }
 
-            
+            if(WindSpeed == null)
+            {
+                throw new ArgumentNullException()
+            }
         }
 
 
