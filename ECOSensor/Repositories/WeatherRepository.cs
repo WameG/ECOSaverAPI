@@ -1,6 +1,6 @@
 ﻿namespace ECOSensor.Repositories
 {
-    public class Repository
+    public class WeatherRepository
     {
     }
 }
