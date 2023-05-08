@@ -4,10 +4,10 @@ namespace ECOSensor.Model
 {
     public class WeatherData
     {
-       public float? Temperature { get; }
-       public int? Humidity { get; }
+        public float? Temperature { get; }
+        public int? Humidity { get; }
 
-       public float? WindSpeed { get; }
+        public float? WindSpeed { get; }
 
         public WeatherData(float temperature, int humidity, float windSpeed)
         {
@@ -16,25 +16,26 @@ namespace ECOSensor.Model
             WindSpeed = windSpeed;
         }
 
-        public void WeatherValidate()
+        public void TemperatureValidate()
         {
             if (Temperature == null)
             {
                 throw new ArgumentNullException();
             }
-
+        }
+        public void HumidityValidate()
+        {
             if (Humidity == null)
             {
                 throw new ArgumentNullException();
             }
-
-            if(WindSpeed == null)
+        }
+        public void WindSpeedValidate()
+        {
+            if (WindSpeed == null)
             {
                 throw new ArgumentNullException();
             }
         }
-
-
-
     }
 }
