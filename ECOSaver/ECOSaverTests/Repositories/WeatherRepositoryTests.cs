@@ -26,13 +26,13 @@ namespace ECOSaver.Repositories.Tests
         [TestMethod()]
         public void AddTest()
         {
-            Assert.Fail();
-        }
+            Weather newweather = new Weather() { Temperature = 12.12, Humidity = 54.23, WindSpeed = 35.23 };
 
-        [TestMethod()]
-        public void DeleteTest()
-        {
-            Assert.Fail();
+            WeatherRepository newweatherRepository = new WeatherRepository();
+
+            Weather weather = newweatherRepository.Add(newweather);
+
+            Assert.IsNotNull(weather);
         }
     }
 }

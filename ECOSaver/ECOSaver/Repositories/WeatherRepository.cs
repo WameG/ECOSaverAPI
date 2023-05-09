@@ -13,15 +13,13 @@ namespace ECOSaver.Repositories
 
         public List<Weather> GetAll()
         {
-            throw new NotImplementedException();
+            return new List<Weather>(_weathers);
         }
 
         public Weather Add(Weather newWeather) {
-            throw new NotImplementedException();
-        }
-
-        public Weather Delete(int id) { 
-            throw new NotImplementedException();
+            newWeather.Validate();
+            _weathers.Add(newWeather);
+            return newWeather;
         }
     }
 }

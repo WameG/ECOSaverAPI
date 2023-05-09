@@ -2,10 +2,10 @@
 {
     public class Weather
     {
-        public string? Temperature { get; set; }
-        public string? Humidity { get; set; }
+        public double Temperature { get; set; }
+        public double Humidity { get; set; }
 
-        public string? WindSpeed { get; set; }
+        public double WindSpeed { get; set; }
 
         public void ValidateTemperature()
         {

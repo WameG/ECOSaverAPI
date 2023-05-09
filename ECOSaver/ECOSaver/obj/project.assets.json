@@ -460,19 +460,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Wame\\.nuget\\packages\\": {}
+    "C:\\Users\\yusaf\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Wame\\OneDrive\\Skrivebord\\3.feksamen\\ECOSaver\\ECOSaver\\ECOSaver.csproj",
+      "projectUniqueName": "C:\\Users\\yusaf\\Source\\Repos\\ECOSaver-Rest-API\\ECOSaver\\ECOSaver\\ECOSaver.csproj",
       "projectName": "ECOSaver",
-      "projectPath": "C:\\Users\\Wame\\OneDrive\\Skrivebord\\3.feksamen\\ECOSaver\\ECOSaver\\ECOSaver.csproj",
-      "packagesPath": "C:\\Users\\Wame\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Wame\\OneDrive\\Skrivebord\\3.feksamen\\ECOSaver\\ECOSaver\\obj\\",
+      "projectPath": "C:\\Users\\yusaf\\Source\\Repos\\ECOSaver-Rest-API\\ECOSaver\\ECOSaver\\ECOSaver.csproj",
+      "packagesPath": "C:\\Users\\yusaf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yusaf\\Source\\Repos\\ECOSaver-Rest-API\\ECOSaver\\ECOSaver\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Wame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yusaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -526,7 +526,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
