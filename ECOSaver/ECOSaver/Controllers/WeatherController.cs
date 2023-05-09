@@ -11,20 +11,29 @@ namespace ECOSaver.Controllers
     [ApiController]
     public class WeatherController : ControllerBase
     {
-        private WeatherRepository weatherRepository;
-        public WeatherController()
+        private WeatherRepository _weatherRepository;
+        public WeatherController(WeatherRepository weatherRepository)
         {
-            
+            _weatherRepository = weatherRepository;
         }
         // GET: api/<WeatherController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
 
-            List<Weather> result = .GetAll();
+        [HttpGet]
+        public ActionResult<IEnumerable<Weather>> Get()
+        {
+            List<Weather> result = _weatherRepository.GetAll();
+
+            if (result.Count < 1)
+            {
+                return NoContent();
+            }
+            return Ok(result);
         }
 
         // GET api/<WeatherController>/5
+       
         [HttpGet("{id}")]
         public string Get(int id)
         {
@@ -32,15 +41,36 @@ namespace ECOSaver.Controllers
         }
 
         // POST api/<WeatherController>
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         [HttpPost]
-        public void Post([FromBody] string value)
+
+        public ActionResult<Weather> Post([FromBody] Weather newWeather)
         {
+            try
+            {
+                Weather createdWeather = _weatherRepository.Add(newWeather);
+                return Created($"api/weather/{createdWeather.Id}", createdWeather);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (ArgumentNullException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // PUT api/<WeatherController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+
         }
 
         // DELETE api/<WeatherController>/5

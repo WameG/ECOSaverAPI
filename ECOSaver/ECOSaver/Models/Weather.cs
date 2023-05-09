@@ -7,6 +7,8 @@
 
         public double WindSpeed { get; set; }
 
+        public int Id { get; set; }
+
         public void ValidateTemperature()
         {
             if(Temperature == null) {
