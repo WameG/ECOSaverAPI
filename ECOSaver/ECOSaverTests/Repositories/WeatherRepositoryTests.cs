@@ -26,13 +26,22 @@ namespace ECOSaver.Repositories.Tests
         [TestMethod()]
         public void AddTest()
         {
-            Weather newweather = new Weather() { Temperature = 12.12, Humidity = 54.23, WindSpeed = 35.23 };
 
-            WeatherRepository newweatherRepository = new WeatherRepository();
+            double temperature = 40;
+            double humidity = 30;
+            DateTime date = DateTime.Now;
 
-            Weather weather = newweatherRepository.Add(newweather);
+            Weather newWeather = new Weather() { Temperature = temperature, Humidity = humidity, Date = date };
 
-            Assert.IsNotNull(weather);
+            WeatherRepository repository = new WeatherRepository();
+
+            Weather addedWeather = repository.Add(newWeather);
+
+            Assert.IsNotNull(addedWeather);
+            Assert.AreEqual(temperature, addedWeather.Temperature);
+            Assert.AreEqual(humidity, addedWeather.Humidity);
+            Assert.AreEqual(date, addedWeather.Date);
+
         }
     }
 }

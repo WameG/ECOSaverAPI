@@ -1,5 +1,6 @@
 ﻿using ECOSaver.Models;
 using ECOSaver.Repositories;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography.X509Certificates;
 
@@ -7,12 +8,13 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace ECOSaver.Controllers
 {
+    [EnableCors("AllowAll")]
     [Route("api/[controller]")]
     [ApiController]
     public class WeatherController : ControllerBase
     {
-        private WeatherRepository _weatherRepository;
-        public WeatherController(WeatherRepository weatherRepository)
+        private IWeatherRepository _weatherRepository;
+        public WeatherController(IWeatherRepository weatherRepository)
         {
             _weatherRepository = weatherRepository;
         }
@@ -25,32 +27,23 @@ namespace ECOSaver.Controllers
         {
             List<Weather> result = _weatherRepository.GetAll();
 
-            if (result.Count < 1)
+            if (result == null)
             {
                 return NoContent();
             }
             return Ok(result);
         }
 
-        // GET api/<WeatherController>/5
-       
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<WeatherController>
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [HttpPost]
-
         public ActionResult<Weather> Post([FromBody] Weather newWeather)
         {
             try
             {
                 Weather createdWeather = _weatherRepository.Add(newWeather);
-                return Created($"api/weather/{createdWeather.Id}", createdWeather);
+                return Created($"api/Weather/{createdWeather.Date}", createdWeather);
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -64,19 +57,6 @@ namespace ECOSaver.Controllers
             {
                 return BadRequest(ex.Message);
             }
-        }
-
-        // PUT api/<WeatherController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-
-        }
-
-        // DELETE api/<WeatherController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
