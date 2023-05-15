@@ -6,11 +6,11 @@ namespace ECOSaver.Repositories
     public class WeatherRepositoryDB : IWeatherRepository
     {
 
-        private int _nextId;
+        //private int _nextId;
         private WeatherContext _weatherContext;
         public WeatherRepositoryDB(WeatherContext weatherContext)
         {
-            _nextId = 1;
+            //_nextId = 1;
             _weatherContext = weatherContext;
         }
 
@@ -21,7 +21,7 @@ namespace ECOSaver.Repositories
 
         public Weather Add(Weather newWeather)
         {
-            newWeather.Id = 2;
+            newWeather.Id = null;
             newWeather.Date = DateTime.Now;
             _weatherContext.weathers.Add(newWeather);
             _weatherContext.SaveChanges();
