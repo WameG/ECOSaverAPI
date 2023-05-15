@@ -5,12 +5,9 @@ namespace ECOSaver.Repositories
 {
     public class WeatherRepositoryDB : IWeatherRepository
     {
-
-        //private int _nextId;
         private WeatherContext _weatherContext;
         public WeatherRepositoryDB(WeatherContext weatherContext)
         {
-            //_nextId = 1;
             _weatherContext = weatherContext;
         }
 
