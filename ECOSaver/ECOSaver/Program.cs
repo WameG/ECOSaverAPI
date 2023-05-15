@@ -37,7 +37,7 @@ bool useSql = true;
 if (useSql)
 {
     var optionaBuilder = new DbContextOptionsBuilder<WeatherContext>();
-    optionaBuilder.UseSqlServer(Secrets.connectionString);
+    optionaBuilder.UseSqlServer(Secret.ConnectionString);
     WeatherContext context = new WeatherContext(optionaBuilder.Options);
     builder.Services.AddSingleton<IWeatherRepository>(new WeatherRepositoryDB(context));
 }
