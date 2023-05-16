@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mcppm\\Source\\Repos\\ECOSaverAPI\\ECOSaver\\ECOSaver\\ECOSaver.csproj": {}
+    "C:\\Users\\diko-\\Source\\Repos\\ECOSaverAPI1\\ECOSaver\\ECOSaver\\ECOSaver.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mcppm\\Source\\Repos\\ECOSaverAPI\\ECOSaver\\ECOSaver\\ECOSaver.csproj": {
+    "C:\\Users\\diko-\\Source\\Repos\\ECOSaverAPI1\\ECOSaver\\ECOSaver\\ECOSaver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mcppm\\Source\\Repos\\ECOSaverAPI\\ECOSaver\\ECOSaver\\ECOSaver.csproj",
+        "projectUniqueName": "C:\\Users\\diko-\\Source\\Repos\\ECOSaverAPI1\\ECOSaver\\ECOSaver\\ECOSaver.csproj",
         "projectName": "ECOSaver",
-        "projectPath": "C:\\Users\\mcppm\\Source\\Repos\\ECOSaverAPI\\ECOSaver\\ECOSaver\\ECOSaver.csproj",
-        "packagesPath": "C:\\Users\\mcppm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mcppm\\Source\\Repos\\ECOSaverAPI\\ECOSaver\\ECOSaver\\obj\\",
+        "projectPath": "C:\\Users\\diko-\\Source\\Repos\\ECOSaverAPI1\\ECOSaver\\ECOSaver\\ECOSaver.csproj",
+        "packagesPath": "C:\\Users\\diko-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diko-\\Source\\Repos\\ECOSaverAPI1\\ECOSaver\\ECOSaver\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mcppm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diko-\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -46,7 +46,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -54,7 +54,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
